@@ -1,5 +1,14 @@
 # ghc-prof-flamegraph
 
+
+## Stack install instructions
+
+- `stack runghc Setup.hs --no-ghc-package-path -- configure --package-db=(stack path --ghc-package-path | tr ':' '\n') --prefix=(stack path --local-bin | sed -e 's/\/bin$//')`
+- `stack runghc Setup.hs -- build`
+- `stack runghc Setup.hs -- install`
+
+
+
 [![Build Status](https://travis-ci.org/fpco/ghc-prof-flamegraph.svg)](https://travis-ci.org/fpco/ghc-prof-flamegraph)
 
 This is a small tool to convert GHC time profiling reports into a format
