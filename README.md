@@ -4,6 +4,7 @@
 ## Stack install instructions
 
 - `stack runghc Setup.hs --no-ghc-package-path -- configure --package-db=(stack path --ghc-package-path | tr ':' '\n') --prefix=(stack path --local-bin | sed -e 's/\/bin$//')`
+- `stack build optparse-applicative`
 - `stack runghc Setup.hs -- build`
 - `stack runghc Setup.hs -- install`
 
